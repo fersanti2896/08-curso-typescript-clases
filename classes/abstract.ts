@@ -20,13 +20,13 @@
     }
 
     const deadpool = new Xmen('Deadpool', 'Wade Wilson');
-    console.log( deadpool.salvarMundo() )
+    // console.log( deadpool.salvarMundo() )
 
     const magneto = new Villian('Magneto', 'Erik Lehnsherr');
-    console.log( magneto.conquistarMundo() );
+    // console.log( magneto.conquistarMundo() );
 
     const printName = ( character: Mutante ) => {
-        console.log( character.realName );
+        // console.log( character.realName );
     }
 
     printName( magneto );

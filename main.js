@@ -17,11 +17,8 @@
         }
     }
     const deadpool = new Xmen('Deadpool', 'Wade Wilson');
-    console.log(deadpool.salvarMundo());
     const magneto = new Villian('Magneto', 'Erik Lehnsherr');
-    console.log(magneto.conquistarMundo());
     const printName = (character) => {
-        console.log(character.realName);
     };
     printName(magneto);
 })();
@@ -72,5 +69,27 @@
     }
     const wolwerine = new Xmen('Wolverine', 'Logan', true);
     wolwerine.fullName = 'Fer';
+})();
+(() => {
+    class Apocalipsis {
+        constructor(name) {
+            this.name = name;
+        }
+        static callApocalipsis() {
+            if (!Apocalipsis.instance) {
+                Apocalipsis.instance = new Apocalipsis('Soy el único Apocalipsis.');
+            }
+            return Apocalipsis.instance;
+        }
+        changeName(newName) {
+            this.name = newName;
+        }
+    }
+    const apocalipsis1 = Apocalipsis.callApocalipsis();
+    const apocalipsis2 = Apocalipsis.callApocalipsis();
+    const apocalipsis3 = Apocalipsis.callApocalipsis();
+    console.log(apocalipsis1);
+    console.log(apocalipsis2);
+    console.log(apocalipsis3);
 })();
 //# sourceMappingURL=main.js.map
